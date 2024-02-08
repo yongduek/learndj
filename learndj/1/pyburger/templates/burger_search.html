@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <h1> 파이버거의 햄버거 검색 화면입니다.</h1>
+        <div>
+            <form method="GET">
+                <input type="text" name="key">
+                <button type="submit"> 검색 </button>
+            </form>
+        </div>
+
+        {% if burger_list %}
+        <h2> 검색 결과 </h2>
+        {% endif %}
+            {% for burger in burger_list %}
+                <div>
+                    {{ burger.name }}
+                    (가격: {{burger.price}}, 칼로리: {{burger.calorie}})
+                </div>
+            {% endfor %}
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <body>
+        <h1>
+            파이버거의 햄버거 목록입니다.
+        </h1>
+        <ol>
+            {% for burger in burger_list %} 
+            <li>
+                <div> 
+                {{burger.name}} (가격: {{burger.price}}, 칼로리: {{burger.calorie}})
+                </div>
+            {% endfor %}
+        </li>
+    </ol>
+    </body>
+</html>
+
